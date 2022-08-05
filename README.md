@@ -4,6 +4,7 @@
   * Install flask,sqlite3 and requests 
   * run the app.py file
   * go to localhost port 5000
+  * to reset data just delete the users4.db (other db has no use just for testing purposes)
    
 # Built with:
   Html,Css,javascript,jquery,python,flask,sqlite3
