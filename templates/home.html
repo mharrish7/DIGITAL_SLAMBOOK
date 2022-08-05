@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/home.css')}}">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- {% for dat in data %}
+    <p>{{dat}} : {{data[dat]}}</p>
+    {% endfor %} -->
+    <div class="fills">
+       <div class="fills3">
+        <form action="" class="fills2" enctype="multipart/form-data">
+            <button class="closeslam">Back</button>
+            <h2 class="fstitle"></h2>
+            <label for="birthday">Your birthday  </label>
+            <input type="text" name="birthday" id="q1">
+            <label for="motto">Your Motto  </label>
+            <input type="text" name="motto" id="q2">
+            <label for="hobbies">Your Hobbies  </label>
+            <input type="text" name="hobbies" id="q3">
+            <label for="likes">Your likes  </label>
+            <input type="text" name="likes" id="q4">
+            <label for="dislikes">Your dislikes  </label>
+            <input type="text" name="dislikes" id="q5">
+            <label for="notice">First thing you notice in me  </label>
+            <input type="text" name="notice" id="q6">
+            <label for="bf">Best friend  </label>
+            <input type="text" name="bf" id="q7">
+            
+            <input type="submit" value="Submit form">
+            <p id="res"></p>
+        </form>
+        <form id = "form">
+            <label for="file" class="form-label">Share your memory</label>
+            <input type="file" class = "form-control" name="file" id="file">
+            <input type="submit" value="Submit image" class="sumi">
+            <p id="res1"></p>
+        </form>
+       </div>
+        
+        
+
+    </div>
+
+    <div class="shows">
+        <button class="closeshow">BACK</button>
+        <div class="shows2">
+            sdsd
+        </div>
+    </div>
+
+    <div class="topbar">
+        <h1 class="head">DIGITAL SLAMBOOK</h1>
+        <p class="user">Welcome {{data['dname']}}</p>
+        <a href="/"><button class="logout">LOGOUT</button></a>
+        
+    </div>
+
+
+
+
+
+    <div class="navig">
+        <button class="fr nav">Friends</button>
+
+        <button class="fs nav">Fill Slams</button>
+
+        <button class="ys nav">Your Slams</button>
+        <button class="frr nav">Friend Requests</button>
+
+    </div>
+
+    <div class="post" style="overflow-y:auto; height:30rem;">
+        <h1>POSTS</h1>
+        {% for i in posts %}
+        <h3>{{i[2]}}</h3>
+        <p>{{i[3]}} - {{i[4]}}</p>
+        {% endfor %}
+    </div>
+
+    <div class="search2" style="overflow-y:auto; height:26rem;">
+        <form action="" class="search">
+            <input type="text" name="sea" id="searcht">
+            <label for="branch">Branch  </label>
+            <select id="branch" name="branch">
+                <option value="ALL">ALL</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+                <option value="PROD">PROD</option>
+                <option value="MME">MME</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="CHEM">CHEM</option>
+
+            </select>
+            <br>
+            <label for="hostel">Hostel  </label>
+            <select id="hostel" name="hostel">
+                <option value="ALL">ALL</option>
+                <option value="ZIRC-A">ZIRC-A</option>
+                <option value="ZIRC-B">ZIRC-B</option>
+                <option value="ZIRC-C">ZIRC-C</option>
+                <option value="BERYL">BERYL</option>
+                <option value="OPAL">OPAL</option>
+                <option value="TOPAZ">TOPAZ</option>
+
+            </select>
+            <input type="submit" value="SEARCH">
+
+        </form>
+        <div class="results"></div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{url_for('static',filename = 'js/home.js')}}"></script>
+
+</body>
+
+</html>
